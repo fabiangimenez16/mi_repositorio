@@ -1,0 +1,232 @@
+
+body{
+    display: grid;
+    grid-template-columns: 30vw 30vw 40vh;
+    grid-template-areas: 
+    "menu menu menu menu"  
+    "imgPrincipal imgPrincipal videos videos"
+    "franja franja franja franja" 
+    "contacto contacto contacto contacto"
+}
+
+.menu{
+    grid-area: menu;
+    }
+
+/* MENÚ */
+header{
+    position: -webkit-sticky; /*menu permanente en el scroll*/
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    background-color: red;
+}
+.menu img{
+margin-left: 5vh;
+width: 10%;
+}
+.menu a{
+font-weight: 400;
+text-decoration: none; /*le saca el subrayado*/
+color: white;
+}
+
+.menu nav{
+font-family: 'Roboto Slab', serif;
+display: inline-block; /*menu al lado del logo*/
+position: absolute;
+right: 7vw;
+}
+
+.menu>nav li{ /*Aplica al menu y submenu*/
+margin: 5px 15px 0 5px;
+padding: 5px 5px 5px 10px;
+}
+.menu>nav>ul>li{
+display: inline-block; /*menu horizontal- uno al lado del otro*/
+}
+.menu>nav>ul>li:hover a{
+background-color: white;
+color:red;
+font-size: x-large;
+}
+
+.menu>nav>ul>li>ul{ /*menu esconde el submenú*/
+position: absolute;
+display: none;
+}
+
+.menu>nav>ul>li:hover ul{  /* muestra el menu al pasar el mouse*/
+display: block;
+background-color: red;
+}
+
+.menu ul li{ /*saca los puntitos*/
+list-style-type: none;
+}
+
+/*PRINCIPAL HOME*/
+.imgPrincipal{
+    grid-area: imgPrincipal;
+    padding: 10px;
+    width: 80%;
+}
+.videos{
+    grid-area: videos;
+    margin-top: 20px;  
+}
+
+/* NOTICIAS */
+.titulosNoticias{
+    font-family: 'Roboto Slab', serif;
+    margin-left: 5vh;
+    display: inline-block;
+}
+.titulosNoticias h1{ 
+    color: red;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.titulosNoticias h2{
+    color:gray;
+    font-size: 30px;
+}
+
+.titulosNoticias p{
+    width: 30vw;
+    font-weight: 300;
+}
+
+
+/* EL CLUB */
+
+.titulosElClub{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    align-items: flex-start;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 5vh;
+    justify-content: space-around;
+}
+.horizontal{
+   display: flex;
+   flex-direction: row; 
+}
+
+.titulosElClub h2{
+    color:gray;
+    font-size: 30px;
+}
+
+.titulosElClub p{
+    font-weight: 300;
+}
+
+.imgCasacas{    /* CAMISETAS */
+display: flex;
+flex-direction: column;
+}
+
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+}
+.imgCasacas img{
+    margin-top: 15px;    
+}
+
+/* FUTBOL*/
+.jugadoresFutbol>div:hover img{
+    transform: scale(2,2);
+}
+.jugadoresBasquet>div:hover img{
+    transform: scale(2,2);
+}
+
+.jugadoresFutbol{
+    margin: 15px;
+}
+
+.jugadoresBasquet{
+    margin: 15px;
+}
+
+/*PIE DE PAGINA*/
+.contacto {
+    grid-area: contacto;
+    background-color: gainsboro;
+    color: lightslategrey;
+    list-style-type: none;
+    font-family: 'Roboto Slab', serif;
+    height: 150px;
+    }
+.franja{
+    grid-area: franja;
+        height: 80px;
+        background-color: red;
+}
+.franja img{
+        margin-left: 45%;
+}
+    
+footer>div>p{
+        margin:0px;
+    }    
+.contacto>div>li{
+        font-size: 14px;
+        margin-left: 20px;
+    }
+.copyR{
+        text-align: right;
+        font-size: 12px;
+        margin-right: 5vw;
+    }
+    .linkRedes img{
+        margin-top: 15px;
+    width: 1.5vw;
+    margin-left: 20px;
+    }
+
+@media only screen and (max-width: 360px){
+    body{
+        display: grid;
+        grid-template-columns: 30vw 30vw 40vh;
+        grid-template-areas: 
+        "menu menu menu menu"  
+        "imgPrincipal imgPrincipal imgPrincipal imgPrincipal"
+        "videos videos videos videos"
+        "franja franja franja franja" 
+        "contacto contacto contacto contacto";
+    }
+    .menu>nav{
+        font-size: x-small;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 375px) {
+    body{
+        display: grid;
+        grid-template-columns: 30vw 30vw 40vh;
+        grid-template-areas: 
+        "menu menu menu menu"  
+        "imgPrincipal imgPrincipal imgPrincipal videos"
+        "franja franja franja franja" 
+        "contacto contacto contacto contacto";
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    body{
+        display: grid;
+        grid-template-columns: 30vw 30vw 40vh;
+        grid-template-areas: 
+        "menu menu menu menu"  
+        "videos videos videos videos"
+        "imgPrincipal imgPrincipal imgPrincipal imgPrincipal"
+        "franja franja franja franja" 
+        "contacto contacto contacto contacto";
+    }
+}
